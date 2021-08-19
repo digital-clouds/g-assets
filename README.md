@@ -1,1 +1,1 @@
-# 👷 `digital-clouds-assets` Worker
+# 👷 `digital-clouds` Assets Worker
