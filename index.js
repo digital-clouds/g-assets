@@ -1,9 +1,9 @@
-addEventListener("fetch", event => {
+addEventListener('fetch', (event) => {
   event.respondWith(handleRequest(event))
 })
 
-const BUCKET_NAME = "digital-clouds"
-const BUCKET_URL = `http://storage.googleapis.com/${BUCKET_NAME}`
+const BUCKET_NAME = 'digital-clouds'
+const BUCKET_URL = `https://storage.googleapis.com/${BUCKET_NAME}`
 
 async function serveAsset(event) {
   const url = new URL(event.request.url)
@@ -12,7 +12,7 @@ async function serveAsset(event) {
 
   if (!response) {
     response = await fetch(`${BUCKET_URL}${url.pathname}`)
-    const headers = { "cache-control": "public, max-age=14400" }
+    const headers = { 'cache-control': 'public, max-age=14400' }
     response = new Response(response.body, { ...response, headers })
     event.waitUntil(cache.put(event.request, response.clone()))
   }
@@ -20,13 +20,13 @@ async function serveAsset(event) {
 }
 
 async function handleRequest(event) {
-  if (event.request.method === "GET") {
+  if (event.request.method === 'GET') {
     let response = await serveAsset(event)
     if (response.status > 399) {
       response = new Response(response.statusText, { status: response.status })
     }
     return response
   } else {
-    return new Response("Method not allowed", { status: 405 })
+    return new Response('Method not allowed', { status: 405 })
   }
 }

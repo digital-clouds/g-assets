@@ -1,8 +1,13 @@
+compatibility_date = "2022-02-15"
 name = "g-assets"
 type = "webpack"
 account_id = "2db2112b269ed3616ed3a863a222f3e8"
 
 workers_dev = true
 
-#route = ""
-#zone_id = ""
+route = "cdn.digitalclouds.dev/*"
+zone_id = "7600c132f040aea60b0533ad801986d5"
+
+kv_namespaces = [
+         { binding = "CDN", id = "b585bd3cfb294b5584434ac268734ac0" }
+]
