@@ -1,4 +1,4 @@
-name: Cloudlfare Workers
+name: Deploy Workers
 
 on:
   push:
@@ -10,8 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: cloudflare/wrangler-action@1.3.0
-      with:        
-        apiKey: ${{ secrets.CF_API_KEY }}
-        email: ${{ secrets.CF_EMAIL }}
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
         publish: true
         preCommands: wrangler build
