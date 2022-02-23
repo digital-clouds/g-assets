@@ -1,8 +1,9 @@
 name: Cloudlfare Workers
 
 on:
+  push:
   workflow_dispatch:
-    
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,5 +12,5 @@ jobs:
     - uses: cloudflare/wrangler-action@1.3.0
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
-        publish: false
+        publish: true
         preCommands: wrangler build
