@@ -11,13 +11,10 @@ async function serveAsset(event) {
   let response = await cache.match(event.request)
 
   if (!response) {
-    response = await fetch(`${BUCKET_URL}${url.pathname}`)
-    const headers = {
-      'x-robots-tag': 'noindex, nofollow',
-      'Cache-Control': 'must-revalidate, public, max-age=15552000',
-    }
-    response = new Response(response.body, { ...response, headers })
-    event.waitUntil(cache.put(event.request, response.clone()))
+    response = await fetch(`${BUCKET_URL}${url.pathname}`);
+    const headers = { 'cache-control': 'public, max-age=14400' };
+    response = new Response(response.body, { ...response, headers });
+    event.waitUntil(cache.put(event.request, response.clone()));
   }
   return response
 }
