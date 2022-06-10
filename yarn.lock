@@ -758,7 +758,7 @@ __metadata:
   resolution: "g-assets-workers@workspace:."
   dependencies:
     prettier: 2.6.2
-    wrangler: 2.0.8
+    wrangler: 2.0.9
   languageName: unknown
   linkType: soft
 
@@ -1581,9 +1581,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.0.8":
-  version: 2.0.8
-  resolution: "wrangler@npm:2.0.8"
+"wrangler@npm:2.0.9":
+  version: 2.0.9
+  resolution: "wrangler@npm:2.0.9"
   dependencies:
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
     "@esbuild-plugins/node-modules-polyfill": ^0.1.4
@@ -1602,7 +1602,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 644976cb199ccfe34d487e1bb61dc2f4a2c0100afa2c9c002c213f7b0401ed14bd130f9dd28c8cf689edd55b8075f2b88f5426df593dee49cc3f90d21c9dc2b3
+  checksum: f22c90f4f8d21c0ab37e9962db32abd2cb4e8da7fbbd69292c63e17d590f36feb447e043a9faa7988e50d3b4748b776f0d1c8ba1755ec604c523c6397b47fe3b
   languageName: node
   linkType: hard
 
