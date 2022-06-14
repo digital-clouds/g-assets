@@ -5,6 +5,15 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@cloudflare/kv-asset-handler@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@cloudflare/kv-asset-handler@npm:0.2.0"
+  dependencies:
+    mime: ^3.0.0
+  checksum: bc6a02a9c80be6de90e46454ef4de09301e68726eaa4835de0e30216e50fffcc5612274a17dfb455916cf3418f0cb25fefd2b561a9d2282f4cc10d40527f0acb
+  languageName: node
+  linkType: hard
+
 "@esbuild-plugins/node-globals-polyfill@npm:^0.1.1":
   version: 0.1.1
   resolution: "@esbuild-plugins/node-globals-polyfill@npm:0.1.1"
@@ -758,7 +767,7 @@ __metadata:
   resolution: "g-assets-workers@workspace:."
   dependencies:
     prettier: 2.7.0
-    wrangler: 2.0.11
+    wrangler: 2.0.12
   languageName: unknown
   linkType: soft
 
@@ -998,6 +1007,15 @@ __metadata:
     socks-proxy-agent: ^7.0.0
     ssri: ^9.0.0
   checksum: 2b7301256e18a2f825c1c3cad14e11492428531ecdea04d846dc12c2d69658d65832746ce965e67c7f98b0d0506115674cf43676c3322709278620bfc886cf4a
+  languageName: node
+  linkType: hard
+
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
+  bin:
+    mime: cli.js
+  checksum: f43f9b7bfa64534e6b05bd6062961681aeb406a5b53673b53b683f27fcc4e739989941836a355eef831f4478923651ecc739f4a5f6e20a76487b432bfd4db928
   languageName: node
   linkType: hard
 
@@ -1581,10 +1599,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.0.11":
-  version: 2.0.11
-  resolution: "wrangler@npm:2.0.11"
+"wrangler@npm:2.0.12":
+  version: 2.0.12
+  resolution: "wrangler@npm:2.0.12"
   dependencies:
+    "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
     "@esbuild-plugins/node-modules-polyfill": ^0.1.4
     blake3-wasm: ^2.1.5
@@ -1602,7 +1621,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: d23d257a01721bcf2b9a2632ad83c15fe7f998f7f73648ed37073f1df0bcb24c7ff3dc7c3f430e2ca930aaa3afc61e1a440fed77d8f569ef10b9934c06c87762
+  checksum: ebc96208d9fcc3dbf726b0352a380c48c65afce26abefd9e3f0007a2835e06d56ea15733005e67e450bbb344e9f4af1d7ff6a430d0891ad61a5d8b4e9d3579dd
   languageName: node
   linkType: hard
 
